@@ -4,6 +4,8 @@
  */
 package salas;
 
+import java.util.Set;
+import obras.Obra;
 import sensores.Humedad;
 import sensores.Temperatura;
 
@@ -17,8 +19,8 @@ public final class Fija extends Sala {
     private String estado;
     
     // Constructor
-    public Fija(String estado, String id, Humedad sensorHum, Temperatura sensorTemp) {
-        super(id, sensorHum, sensorTemp);
+    public Fija(String estado, String id, Humedad sensorHum, Temperatura sensorTemp, Set<Obra> obras) {
+        super(id, sensorHum, sensorTemp, obras);
         this.estado = estado;
     }
 

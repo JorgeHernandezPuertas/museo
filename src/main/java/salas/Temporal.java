@@ -5,6 +5,8 @@
 package salas;
 
 import java.time.LocalDate;
+import java.util.Set;
+import obras.Obra;
 import sensores.Humedad;
 import sensores.Temperatura;
 
@@ -19,8 +21,9 @@ public final class Temporal extends Sala {
     private LocalDate fechaFin;
     
     // Constructor
-    public Temporal(LocalDate fechaIni, LocalDate fechaFin, String id, Humedad sensorHum, Temperatura sensorTemp) {
-        super(id, sensorHum, sensorTemp);
+    public Temporal(LocalDate fechaIni, LocalDate fechaFin, String id, 
+            Humedad sensorHum, Temperatura sensorTemp, Set<Obra> obras) {
+        super(id, sensorHum, sensorTemp, obras);
         this.fechaIni = fechaIni;
         this.fechaFin = fechaFin;
     }
