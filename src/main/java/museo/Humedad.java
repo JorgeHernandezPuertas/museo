@@ -8,7 +8,7 @@ package museo;
  *
  * @author jorge
  */
-public class Humedad extends Sensor {
+public final class Humedad extends Sensor {
     
     // Atributos
     public final int MAX_HUM;
