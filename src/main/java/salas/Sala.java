@@ -4,7 +4,10 @@
  */
 package salas;
 
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
+import obras.Obra;
 import sensores.Humedad;
 import sensores.Sensor;
 import sensores.Temperatura;
@@ -18,12 +21,15 @@ public abstract class Sala {
     // Atributos
     private String id;
     private Sensor[] sensores;
+    private Set<Obra> obras;
     
     // Constructor
-    public Sala(String id, Humedad sensorHum, Temperatura sensorTemp) {
+    public Sala(String id, Humedad sensorHum, Temperatura sensorTemp, Set<Obra> obras) {
         this.sensores = new Sensor[2];
         this.sensores[0] = sensorHum;
         this.sensores[1] = sensorTemp;
+        this.id = id;
+        this.obras = obras;
     }
 
     // Getter
@@ -33,6 +39,15 @@ public abstract class Sala {
 
     public String getId() {
         return id;
+    }
+    
+    public Set<Obra> getObras() {
+        return obras;
+    }
+
+    // Setter
+    public void setObras(Set<Obra> obras) {
+        this.obras = obras;
     }
 
     // Métodos equals y hashCode
@@ -68,7 +83,5 @@ public abstract class Sala {
         sb.append('}');
         return sb.toString();
     }
-    
-    
-    
+
 }
