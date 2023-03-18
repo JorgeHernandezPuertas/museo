@@ -11,11 +11,11 @@ package museo;
 public final class Humedad extends Sensor {
     
     // Atributos
-    public final int MAX_HUM;
-    public final int MIN_HUM;
+    public final double MAX_HUM;
+    public final double MIN_HUM;
     
     // Constructor
-    public Humedad(int MAX_HUM, int MIN_HUM, String id) {
+    public Humedad(double MAX_HUM, double MIN_HUM, String id) {
         super(id);
         this.MAX_HUM = MAX_HUM;
         this.MIN_HUM = MIN_HUM;
