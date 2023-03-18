@@ -8,7 +8,7 @@ package empleados;
  *
  * @author jorge
  */
-public class Monitor extends Empleado {
+public final class Monitor extends Empleado {
     
     // Atributo (para que no se quede vacía)
     private String especialidadTour;
