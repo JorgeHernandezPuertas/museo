@@ -9,5 +9,17 @@ package empleados;
  * @author jorge
  */
 public abstract class Conservador extends Empleado implements Restaurador {
-    
+
+    public Conservador(String nif, String nombre) {
+        super(nif, nombre);
+    }
+
+    // toString
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Conservador{");
+        sb.append('}');
+        return sb.toString();
+    }  
 }

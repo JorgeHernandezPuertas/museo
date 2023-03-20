@@ -13,6 +13,12 @@ import obras.Pintura;
  */
 public final class Escultorico extends Conservador {
 
+    // constructor
+    public Escultorico(String nif, String nombre) {
+        super(nif, nombre);
+    }
+
+    // Método de la interfaz
     @Override
     public void restaurar(Obra obra) {
         // Como es escultorico hago que restaure solo las obras que son esculturas
@@ -23,6 +29,16 @@ public final class Escultorico extends Conservador {
             System.out.println("El restaurador es escultorico y no puede restaurar"
                     + " una pintura.");
         }
+    }
+    
+    // toString
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(super.toString());
+        sb.append("Escultorico{");
+        sb.append('}');
+        return sb.toString();
     }
     
 }

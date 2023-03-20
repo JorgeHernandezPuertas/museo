@@ -13,6 +13,12 @@ import obras.Pintura;
  */
 public final class Pictorico extends Conservador {
 
+    // Constructor
+    public Pictorico(String nif, String nombre) {
+        super(nif, nombre);
+    }
+
+    // Método de la interfaz
     @Override
     public void restaurar(Obra obra) {
         // Como es pictorico hago que restaure solo las obras que son pinturas
@@ -24,6 +30,16 @@ public final class Pictorico extends Conservador {
                     + " una escultura.");
         }
         
+    }
+    
+    // toString
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(super.toString());
+        sb.append("Pictorico{");
+        sb.append('}');
+        return sb.toString();
     }
     
 }
