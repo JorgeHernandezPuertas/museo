@@ -20,21 +20,25 @@ public abstract class Sala {
     
     // Atributos
     private String id;
-    private Sensor[] sensores;
+    private Sensor sensorHumedad;
+    private Sensor sensorTemperatura;
     private Set<Obra> obras;
     
     // Constructor
     public Sala(String id, Humedad sensorHum, Temperatura sensorTemp, Set<Obra> obras) {
-        this.sensores = new Sensor[2];
-        this.sensores[0] = sensorHum;
-        this.sensores[1] = sensorTemp;
+        this.sensorHumedad = sensorHum;
+        this.sensorTemperatura = sensorTemp;
         this.id = id;
         this.obras = obras;
     }
 
     // Getter
-    public Sensor[] getSensores() {
-        return sensores;
+    public Sensor getSensorHumedad() {
+        return sensorHumedad;
+    }
+
+    public Sensor getSensorTemperatura() {
+        return sensorTemperatura;
     }
 
     public String getId() {
@@ -79,9 +83,11 @@ public abstract class Sala {
         StringBuilder sb = new StringBuilder();
         sb.append("Sala{");
         sb.append("id=").append(id);
-        sb.append(", sensores=").append(sensores);
+        sb.append(", sensorHumedad=").append(sensorHumedad);
+        sb.append(", sensorTemperatura=").append(sensorTemperatura);
+        sb.append(", obras=").append(obras);
         sb.append('}');
         return sb.toString();
     }
-
+    
 }
