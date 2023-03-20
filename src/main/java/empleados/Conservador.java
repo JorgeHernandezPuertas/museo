@@ -8,6 +8,6 @@ package empleados;
  *
  * @author jorge
  */
-public abstract class Conservador extends Empleado {
+public abstract class Conservador extends Empleado implements Restaurador {
     
 }
