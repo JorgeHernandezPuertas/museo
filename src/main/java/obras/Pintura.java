@@ -8,13 +8,13 @@ package obras;
  *
  * @author jorge
  */
-public final class Cuadro extends Obra {
+public final class Pintura extends Obra {
     
     // Atributo
     private String estilo;
 
     // Constructor
-    public Cuadro(String estilo, String id, String autor) {
+    public Pintura(String estilo, String id, String autor) {
         super(id, autor);
         this.estilo = estilo;
     }
