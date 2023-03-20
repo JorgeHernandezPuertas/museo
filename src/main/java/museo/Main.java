@@ -46,5 +46,12 @@ public class Main {
         // Contrato a un conservador escultorico y a uno pictorico
         museo.contratarEmpleado(new Pictorico("123", "manolo"));
         museo.contratarEmpleado(new Escultorico("321", "manuel"));
+        
+        // Hago el que el restaurador pictorico intente restaurar todas las obras
+        // del museo
+        for(Sala sala:museo.getSalas()){
+            
+        }
+        
     }
 }
