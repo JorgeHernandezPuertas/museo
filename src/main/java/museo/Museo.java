@@ -5,11 +5,11 @@
 package museo;
 
 import empleados.Empleado;
+import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Set;
 import salas.Sala;
 
 /**
@@ -22,14 +22,14 @@ public class Museo {
     private String nombre;
     private String direccion;
     private Map<String, Sala> salas; // La id de la sala es la key
-    private Set<Empleado> empleados; // Uso un set para no tener empleados repetidos
+    private List<Empleado> empleados; // Uso un set para no tener empleados repetidos
     
     // Constructor
     public Museo(String nombre, String direccion) {
         this.nombre = nombre;
         this.direccion = direccion;
         this.salas = new HashMap<>();
-        this.empleados = new HashSet<>();
+        this.empleados = new ArrayList<>();
     }
 
     // getters y setters
@@ -57,11 +57,11 @@ public class Museo {
         this.salas = salas;
     }
 
-    public Set<Empleado> getEmpleados() {
+    public List<Empleado> getEmpleados() {
         return empleados;
     }
 
-    public void setEmpleados(Set<Empleado> empleados) {
+    public void setEmpleados(List<Empleado> empleados) {
         this.empleados = empleados;
     }
 
